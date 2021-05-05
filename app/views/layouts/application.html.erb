@@ -13,10 +13,12 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     -->
     <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
-
+    
   </head>
 
   <body>
+   <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
