@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :materials
   resources :levels
   devise_for :users
   root to:'homes#index'
