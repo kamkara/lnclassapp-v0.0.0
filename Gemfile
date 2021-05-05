@@ -25,6 +25,24 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+
+
+################  URL Section  ################
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+
+################  Membership Section  ################
+
+
+#gem 'devise_uid', '~> 0.1.1'
+#gem 'devise_lastseenable', '~> 0.0.6'
+#gem 'devise-i18n', '~> 1.9', '>= 1.9.4'
+#gem 'devise_roles', '~> 0.3.0'
+#gem 'devise_invitable', '~> 2.0', '>= 2.0.5'
+#gem 'devise_invitations', '~> 0.2.1'
+#gem 'devise_marketable', '~> 0.0.4'
+#gem 'devise_suspendable', '~> 0.6.1'
+
+
 ################  Style Section  ################""
 gem 'bootstrap', '~> 5.0.0.beta3'
 
@@ -97,5 +115,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "tailwindcss-rails", "~> 0.3.3"
