@@ -13,4 +13,11 @@ Turbolinks.start()
 ActiveStorage.start()
 
 //= require jquery
+
 import "stylesheets/application"
+import "../js/javascript.js"
+
+
+require("trix")
+require("@rails/actiontext")
+
