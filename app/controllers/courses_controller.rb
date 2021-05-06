@@ -25,7 +25,7 @@ class CoursesController < ApplicationController
   # POST /courses or /courses.json
   def create
     @course = current_user.courses.build(course_params)
-    @course.author  = current_user.full_name
+    @course.author  = 'kamkara'
 
     respond_to do |format|
       if @course.save

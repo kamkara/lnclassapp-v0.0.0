@@ -14,3 +14,7 @@ ActiveStorage.start()
 
 //= require jquery
 import "stylesheets/application"
+
+require("trix")
+require("@rails/actiontext")
+

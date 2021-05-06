@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :levels
   has_many :materials
+  has_many :courses
 
    ################  VALIDATIONS  ###########################
 def roles

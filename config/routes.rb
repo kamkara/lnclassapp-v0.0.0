@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :courses
   resources :materials
   resources :levels
-  devise_for :users
   root to:'homes#index'
   
   devise_for :users, controllers: { registrations: 'users/registrations' }
