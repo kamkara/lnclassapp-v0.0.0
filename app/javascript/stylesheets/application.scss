@@ -2,4 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 // application.scss
+//IMPORTS GEMS
 @import "./actiontext.scss";
+@import "rails_bootstrap_forms";
+
+//CUSTOM STYLES
+@import "./sign_up.scss";
