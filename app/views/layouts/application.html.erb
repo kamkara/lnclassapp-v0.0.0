@@ -2,22 +2,11 @@
 <html>
   <head>
     <title>Lnclassapp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-   
-   <!---
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    -->
-    <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
-    
+    <%= render "layouts/shared/headers" %>
   </head>
 
   <body>
-    <%= yield %>
     <%= render "layouts/shared/notices" %>
+    <%= yield %>
   </body>
 </html>
