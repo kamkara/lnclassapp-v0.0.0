@@ -48,7 +48,7 @@ gem 'devise', '~> 4.8'
 ################  Style Section  ################""
 gem 'bootstrap', '~> 5.0.0.beta3'
 gem "bootstrap_form", "~> 4.5"
-
+gem 'tailwindcss-rails'
 ################  Js Section  ################""
 gem 'jquery-rails'
 
