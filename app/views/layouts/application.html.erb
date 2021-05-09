@@ -3,11 +3,11 @@
   <head>
     <title><%= @title %></title>
     <%= render "layouts/shared/headers" %>
-    
-    
   </head>
 
   <body class="bg-gray-100">
+    <!--Home page  Navbar-->
+    <%= render "shared/nav/navbar" %>
     <%= render "layouts/shared/notices" %>
     <%= yield %>
   </body>
