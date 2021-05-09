@@ -1,41 +1,29 @@
-<div class="container">
+
+
 <!-- component -->
-<div class="min-h-screen bg-gray-100 py-2 flex flex-col justify-center sm:py-4">
-  <div class="flex space-x-4 px-4 justify-around">
-    <!-- component -->
-<body>
-  <div class="font-sans min-h-screen antialiased bg-gray-300 pt-12 pb-4">
-    <div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
-      <h1 class="font-bold text-center text-4xl text-yellow-500"><span class="text-blue-500">Lnclass</span></h1>
-      <form action="#">
-        <div class="flex flex-col bg-white p-10 rounded-lg shadow space-y-6">
-          <h1 class="font-bold text-xl text-center">Connectez-vous</h1>
-
-          <div class="flex flex-col space-y-1">
-            <input type="text" name="username" id="username" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Username" />
-          </div>
-
-          <div class="flex flex-col space-y-1">
-            <input type="password" name="password" id="password" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Password" />
-          </div>
-
-          <div class="relative">
-            <input type="checkbox" name="remember" id="remember" checked class="inline-block align-middle" />
-            <label class="inline-block align-middle" for="remember">Restez connecté</label>
-          </div>
-
-          <div class="flex flex-col-reverse sm:flex-row sm:justify-between items-center">
-            <a href="#" class="inline-block text-blue-500 hover:text-blue-800 hover:underline">Mot de passe oublié?</a>
-            <button type="submit" class="bg-blue-500 text-white font-bold px-3 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors">Se connecter</button>
-          </div>
-        </div>
-      </form>
-      <div class="flex justify-center text-gray-500 text-sm">
-        <p>&copy;2021. Tous droit reservé.</p>
+<div class="h-screen bg-gray-200 flex flex-col space-y-10 justify-center items-center">
+  <div class="bg-white w-96 shadow-xl rounded p-5">
+    <h1 class="text-3xl font-medium items-center">Lnclass</h1>
+    <p class="text-sm">Connectez-vous à la plateforme</p>
+    
+  
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div  class="space-y-5 mt-5">
+      <!-- login-->
+      <%= f.text_field :login, class:"w-full h-12 border border-gray-800 rounded px-3", placeholder:"Email ou N° téléphone", hide_label: true %>
+      
+      <!-- Pwd-->
+      <div class="w-full flex items-center border border-gray-800 rounded px-3">
+        <%= f.password_field :password, class:"w-4/5 h-12", placeholder:"Mot de passe" %>
+        <span class="text-blue-700 hover:bg-blue-400 rounded-md px-3">Voir</span>
       </div>
+      <!-- Pwd forget -->
+      <div class="">
+        <a href="#!" class="font-medium text-blue-400 hover:bg-blue-300 rounded-md p-2">Mot de passe oublié?</a>
+      </div>
+      <!-- button submit-->
+    <%= f.submit "Connecter", class:"text-center w-full bg-blue-400 rounded-md text-white font-bold py-3 font-medium" %>
     </div>
+    <% end %>
   </div>
-</body>
-  </div>
-</div>
 </div>
