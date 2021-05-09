@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:trackable, authentication_keys: [:login]
 
-  has_many :levels
   has_many :materials
   has_many :courses
+  has_many :levels
+  
 
    ################  VALIDATIONS  ###########################
 def roles
