@@ -10,5 +10,13 @@
     <%= render "shared/nav/navbar" %>
     <%= render "layouts/shared/notices" %>
     <%= yield %>
+
   </body>
+    <!-- navbar script -->
+  <script>
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function(){
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+	</script>
 </html>
