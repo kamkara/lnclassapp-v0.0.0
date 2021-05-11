@@ -85,8 +85,8 @@ gem 'jquery-rails'
 
 group :production do
 # Use Unicorn as the app server
- #gem 'rack-timeout', '~> 0.6.0'
- #gem 'unicorn', '~> 5.8'
+gem 'rack-timeout', '~> 0.6.0'
+gem 'unicorn', '~> 5.8'
 end
 
 group :development, :production do 

@@ -84,7 +84,12 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: lnclassapp_production
-  username: lnclassapp
-  password: <%= ENV['LNCLASSAPP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 5432
+  host: postgresdatabase.internal
+  database: main
+  username: main
+  password: main
+  
