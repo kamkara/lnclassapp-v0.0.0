@@ -1,3 +1,13 @@
+-# This is necessary for nvm to work.
+-unset NPM_CONFIG_PREFIX
+-# Disable npm update notifier; being a read only system it will probably annoy you.
+-export NO_UPDATE_NOTIFIER=1
+-# This loads nvm for general usage.
+-export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
+-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+
+
 # This gives us very good cache coverage, 96 -> 99.
 # In practice it is 1-2% perf improvement.
 export RUBY_GLOBAL_METHOD_CACHE_SIZE=131072
@@ -9,3 +19,4 @@ export RUBY_GC_HEAP_OLDOBJECT_LIMIT_FACTOR=1.5
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 
 export UNICORN_TIMEOUT=15
+
