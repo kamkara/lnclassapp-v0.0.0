@@ -224,6 +224,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unicorn (5.8.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -279,6 +281,7 @@ DEPENDENCIES
   tailwindcss-rails (~> 0.3.3)
   turbolinks (~> 5)
   tzinfo-data
+  uglifier (~> 4.2)
   unicorn (~> 5.8)
   web-console (>= 4.1.0)
   webdrivers

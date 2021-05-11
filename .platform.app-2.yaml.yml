@@ -1,0 +1,66 @@
+# The name of this app. Must be unique within a project.
+name: app
+type: 'ruby:2.7'
+
+variables:
+    env:
+      # Update these for your desired NVM and Node versions.
+      NVM_VERSION: v0.38.0
+      NODE_VERSION: v14.16.1
+
+dependencies:
+   nodejs:
+        yarn: "*"
+    
+
+hooks:
+    build: |
+      bundle install --without development test
+      unset NPM_CONFIG_PREFIX
+        export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
+        # install.sh will automatically install NodeJS based on the presence of $NODE_VERSION
+        curl -f -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        
+      bundle exec rails assets:precompile
+      bundle exec rails webpacker:compile 
+    deploy: |
+      RAILS_ENV=production bundle exec rake db:migrate 
+       
+web:
+  upstream: 
+    socket_family: "unix"
+  commands: 
+    start: "unicorn -l $SOCKET -E production config.ru"
+  locations: 
+    '/': 
+      root: "public"
+      passthru: true
+      expires: 1h
+      allow: true
+
+mounts:
+    log:
+      source: local
+      source_path: log
+    tmp:
+      source: local
+      source_path: tmp
+relationships:
+    postgresdatabase: 'dbpostgres:postgresql'
+# The size of the persistent disk of the application (in MB).
+disk: 1024
+
+
+
+
+
+#on file environment
+# This is necessary for nvm to work.
+unset NPM_CONFIG_PREFIX
+# Disable npm update notifier; being a read only system it will probably annoy you.
+export NO_UPDATE_NOTIFIER=1
+# This loads nvm for general usage.
+export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
