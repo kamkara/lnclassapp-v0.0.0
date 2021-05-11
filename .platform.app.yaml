@@ -32,8 +32,8 @@ variables:
         RAILS_TMP: /tmp
         EXECJS_RUNTIME: 'Node'
         # Update these for your desired NVM and Node versions.
-        #NVM_VERSION: v0.38.0
-        #NODE_VERSION: v14.16.1
+        NVM_VERSION: v0.38.0
+        NODE_VERSION: v14.16.1
 
 
 ################ NOT ADD  ###########
