@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:trackable, authentication_keys: [:login]
 
-  has_many :levels
   has_many :materials
   has_many :courses
+  has_many :levels
+  
 
    ################  VALIDATIONS  ###########################
 def roles
@@ -27,7 +28,7 @@ end
 
   ######### PRESENTES && FORMAT  ######
     validates :phone_contact,
-              :city, :school_name,
+              #:city, :school_name,
               :email,  presence: true
 
     validates :last_name, :first_name,
@@ -91,7 +92,7 @@ end
 ################  CONSTANTE   ###########################
 CLASSROOM   = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
 SCHOOL_NAME = ["LYCEE MODERNE TIASSALE", "COLLEGE SAINT MICHEL TIASSALE", "COLLEGE PRIVE MIXTE UNION TIASSALE", "COLLÈGE NOTRE DAME DE LA PAIX TIASSALE", "COLLÈGE PRIVE LA MANNE", "Autres villes"]
-CITY        = [ "Tiassalé", "N'Douci", "Agboville", "Divo", "Autres villes"]
+CITY_NAME       = [ "Tiassalé", "N'Douci", "Agboville", "Divo", "Autres villes"]
 ROLE        = ["student", "teacher", "Admin"]
 
 
