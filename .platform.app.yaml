@@ -16,7 +16,8 @@ type: "ruby:2.7"
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
-    database: 'db:postgresql'
+    postgresdatabase: 'dbpostgres:postgresql'
+
 
 # The size of the persistent disk of the application (in MB).
 disk: 1024
