@@ -1,74 +1,54 @@
-<!-- component -->
-<div class="mt-24">
-    <!-- 1 card -->
-        <div class="relative bg-white py-6 px-6 rounded-3xl my-4 shadow-xl ">
-            <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-pink-500 left-4 -top-6">
-                <!-- svg  -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-            </div>
-            <div class="mt-8">
-                <p class="text-xl font-semibold my-2"><%= current_user.full_name %></p>
-                <div class="flex space-x-2 text-gray-400 text-sm">
-                    <!-- svg  -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                     <p><%= current_user.city %></p> 
-                </div>
-                <div class="flex space-x-2 text-gray-400 text-sm my-3">
-                    <!-- svg  -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                     <p><%= current_user.school_name %></p> 
-                </div>
-                <div class="border-t-2"></div>
 
-                <div class="flex justify-between">
-                    <div class="my-2">
-                        <p class="font-semibold text-base mb-2">Familles</p>
-                        <div class="flex space-x-2">
-                            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-                            class="w-6 h-6 rounded-full"/>
-                             
-                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSqK0tVELGWDYAiUY1oRrfnGJCKSKv95OGUtm9eKG9HQLn769YDujQi1QFat32xl-BiY&usqp=CAU" 
-                            class="w-6 h-6 rounded-full"/>
-                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSqK0tVELGWDYAiUY1oRrfnGJCKSKv95OGUtm9eKG9HQLn769YDujQi1QFat32xl-BiY&usqp=CAU" 
-                            class="w-6 h-6 rounded-full"/>
-                        </div>
-                    </div>
-                    <div class="my-2">
-                        <div class="flex space-x-4">
-                            <p class="font-semibold text-base mb-2">Math</p>
-                            <p class="font-semibold text-base mb-2">HG</p>
-                            <p class="font-semibold text-base mb-2">SVT</p>
-                            <p class="font-semibold text-base mb-2">Math</p>
-                            <p class="font-semibold text-base mb-2">HG</p>
-                            <p class="font-semibold text-base mb-2">SVT</p>
-                            <p class="font-semibold text-base mb-2">Math</p>
-                            <p class="font-semibold text-base mb-2">HG</p>
-                            <p class="font-semibold text-base mb-2">SVT</p>
-                            <p class="font-semibold text-base mb-2">Math</p>
-                            <p class="font-semibold text-base mb-2">HG</p>
-                            <p class="font-semibold text-base mb-2">SVT</p>
-                            <p class="font-semibold text-base mb-2">Math</p>
-                            <p class="font-semibold text-base mb-2">HG</p>
-                            <p class="font-semibold text-base mb-2">SVT</p>
-                            
-                        </div>
-                    </div>
-                    <div class="my-2">
-                        <p class="font-semibold text-base mb-2">Réponses</p>
-                        <div class="text-base text-gray-400 font-semibold">
-                            <p>34%</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
-<div class="flex items-center justify-center mt-20">
-</div>
+<div class="d-flex flex-column p-3 bg-light" style="width: 280px; mt-24">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-4">Lnclass</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+          Créer Cours
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+          Créer Exercices
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+          Résultats
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+          Customers
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
